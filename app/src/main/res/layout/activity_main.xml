@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#515151"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/mainFrameForFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="61dp"
+        android:background="@color/dark"
+        tools:ignore="MissingConstraints">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@color/dark"
+        app:menu="@menu/menu_bottom"
+        app:itemIconTint="@color/color_bottom_menu"
+        app:itemTextColor="@color/color_bottom_menu"
+        app:labelVisibilityMode="unlabeled"/>
+</FrameLayout>

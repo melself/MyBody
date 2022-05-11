@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".AuthActivity">
+
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/regback" />
+
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Войти"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="120dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Зарегистрироваться"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/hello_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="36sp"
+        android:text="Привет" />
+
+    <TextView
+        android:id="@+id/newMen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="180dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="36sp"
+        android:text="Новичок," />
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="16sp"
+        android:text="Введите свои данные ниже или войдите в систему с другой учетной записью" />
+
+    <EditText
+        android:id="@+id/emailReg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="440dp"
+        android:ems="10"
+        android:backgroundTint="@color/gray"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/passReg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="510dp"
+        android:ems="10"
+        android:backgroundTint="@color/gray"
+        android:inputType="textPassword"
+        android:hint="Пароль"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/confPassReg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="580dp"
+        android:ems="10"
+        android:backgroundTint="@color/gray"
+        android:inputType="textPassword"
+        android:hint="Подтвердите пароль"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="40dp"
+        android:text="Регистрация"
+        android:fontFamily="@font/opensans_bold"
+        android:background="@drawable/custom_button_perpl"/>
+
+
+    <EditText
+        android:id="@+id/emailLog"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="480dp"
+        android:ems="10"
+        android:backgroundTint="@color/gray"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:visibility="gone"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/passLog"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="550dp"
+        android:ems="10"
+        android:backgroundTint="@color/gray"
+        android:inputType="textPassword"
+        android:hint="Пароль"
+        android:visibility="gone"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:id="@+id/logBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="40dp"
+        android:text="Войти"
+        android:visibility="gone"
+        android:fontFamily="@font/opensans_bold"
+        android:background="@drawable/custom_button_perpl"/>
+</FrameLayout>

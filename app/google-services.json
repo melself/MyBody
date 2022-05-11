@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "878730579075",
+    "project_id": "mybody-ffcb5",
+    "storage_bucket": "mybody-ffcb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878730579075:android:ff950ed8e20fc95fd39fb6",
+        "android_client_info": {
+          "package_name": "com.melself.mybody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878730579075-gi4b0pv92amlfmb2cfvsip0rh0avs10k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZAN9crLcxh20Hxtj1AsaEd8Y0bnLnxng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878730579075-gi4b0pv92amlfmb2cfvsip0rh0avs10k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
