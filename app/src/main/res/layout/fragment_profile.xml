@@ -116,6 +116,13 @@
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="70dp"/>
 
+    <View
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="19dp"/>
+
     <Button
         android:id="@+id/signOutBtn"
         android:layout_width="350dp"
@@ -127,15 +134,15 @@
         android:fontFamily="@font/opensans_bold"
         android:textAllCaps="false"
         android:paddingStart="10dp"
+        android:stateListAnimator="@null"
         android:textColor="#FF0000"
         android:background="@drawable/custom_button_transparent"
         tools:ignore="RtlCompat" />
-
     <View
         android:layout_width="350dp"
         android:layout_height="1dp"
         android:background="@color/gray"
         android:layout_gravity="bottom|center"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="19dp"/>
 
 </FrameLayout>
