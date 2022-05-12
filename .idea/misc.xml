@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/MyBody/app/src/main/res/drawable/custom_button_days.xml" value="0.308" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/drawable/custom_button_perpl.xml" value="0.2965" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/drawable/custom_button_transparent.xml" value="0.308" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/drawable/custom_edit_text.xml" value="0.2965" />
@@ -13,7 +14,8 @@
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/activity_take_info.xml" value="0.33" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_age.xml" value="0.25" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_growth.xml" value="0.3578125" />
-        <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_profile.xml" value="0.16" />
+        <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_sex.xml" value="0.25" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_trainer.xml" value="0.17401215805471124" />
         <entry key="..\:/Projects/MyBody/app/src/main/res/layout/fragment_weigt.xml" value="0.371875" />
