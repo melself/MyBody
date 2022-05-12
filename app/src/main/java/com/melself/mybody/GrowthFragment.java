@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -66,8 +67,9 @@ public class GrowthFragment extends Fragment {
             public void onClick(View view) {
                 int growthInt = Integer.parseInt(inputGrowth.getText().toString());
                 myRef.child("Users").child(user.getUid()).child("growth").setValue(growthInt);
-                Intent openMainActivity = new Intent(getContext(), MainActivity.class);
-                startActivity(openMainActivity);
+                Toast.makeText(getContext(), "Теперь войдите в профиль", Toast.LENGTH_SHORT).show();
+                Intent openAuth = new Intent(getContext(), AuthActivity.class);
+                startActivity(openAuth);
             }
         });
 

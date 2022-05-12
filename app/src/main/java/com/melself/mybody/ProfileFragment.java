@@ -1,15 +1,33 @@
 package com.melself.mybody;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
 
+    Button signOutBtn;
+    TextView nameProf, weightProf, growthProf, ageProf;
+
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase db;
+    private DatabaseReference myRef;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,6 +39,78 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        signOutBtn = view.findViewById(R.id.signOutBtn);
+        nameProf = view.findViewById(R.id.nameProf);
+        weightProf = view.findViewById(R.id.weightProf);
+        growthProf = view.findViewById(R.id.growthProf);
+        ageProf = view.findViewById(R.id.ageProf);
+
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseDatabase.getInstance();
+        myRef = db.getReference();
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Object nameFrom = snapshot.child(user.getUid()).child("name").getValue();
+                nameProf.setText(nameFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Object ageFrom = snapshot.child(user.getUid()).child("year").getValue();
+                ageProf.setText(ageFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Object weightFrom = snapshot.child(user.getUid()).child("weight").getValue();
+                weightProf.setText(weightFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        myRef.child("Users").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Object growthFrom = snapshot.child(user.getUid()).child("growth").getValue();
+                growthProf.setText(growthFrom.toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getContext(), AuthActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

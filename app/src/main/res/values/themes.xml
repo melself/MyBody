@@ -23,4 +23,9 @@
         <item name="colorControlNormal">#C464E5</item>
     </style>
 
+    <style name="imageProf">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
