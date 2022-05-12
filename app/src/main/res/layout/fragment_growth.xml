@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".GrowthFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Какой у Вас рост?"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="24sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите Ваш рост"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="18sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="См"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="36sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="80dp" />
+
+    <EditText
+        android:id="@+id/inputGrowth"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:backgroundTint="@color/pink"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="300dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="@font/opensans_bold"/>
+
+    <Button
+        android:id="@+id/nextBtn3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="40dp"
+        android:text="Далее"
+        android:visibility="gone"
+        android:fontFamily="@font/opensans_bold"
+        android:background="@drawable/custom_button_perpl"/>
+
+    <ImageButton
+        android:id="@+id/backBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:src="@drawable/backbtn"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/opensans_bold"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</FrameLayout>

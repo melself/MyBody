@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".SexFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Расскажи о себе!"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="24sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите Ваш пол"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="18sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="100dp"/>
+
+    <ImageButton
+        android:id="@+id/manBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mangender"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="200dp"/>
+
+    <ImageButton
+        android:id="@+id/womanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/womangender"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="400dp"/>
+
+</FrameLayout>

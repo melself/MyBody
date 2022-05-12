@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".AgeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сколько Вам лет?"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="24sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Укажите Ваш возраст"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="18sp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/ageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="250dp"/>
+
+    <DatePicker android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="300dp"
+        android:theme="@style/MyDatePicker"/>
+
+    <Button
+        android:id="@+id/nextBtn1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="40dp"
+        android:text="Далее"
+        android:visibility="gone"
+        android:fontFamily="@font/opensans_bold"
+        android:background="@drawable/custom_button_perpl"/>
+
+    <ImageButton
+        android:id="@+id/backBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:src="@drawable/backbtn"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/opensans_bold"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</FrameLayout>

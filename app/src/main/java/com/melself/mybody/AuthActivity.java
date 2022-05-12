@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,7 +32,6 @@ public class AuthActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase db;
     private DatabaseReference users;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,6 +139,8 @@ public class AuthActivity extends AppCompatActivity {
 
                         users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
                         Toast.makeText(AuthActivity.this, "Регистрация пройдена", Toast.LENGTH_SHORT).show();
+                        Intent openTake = new Intent(AuthActivity.this, TakeInfoActivity.class);
+                        startActivity(openTake);
                     }
                     else {
                         Toast.makeText(AuthActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
