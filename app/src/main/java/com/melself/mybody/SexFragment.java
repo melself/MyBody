@@ -52,7 +52,7 @@ public class SexFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 myRef.child("Users").child(user.getUid()).child("sex").setValue("Мужской");
-                replaceToAge();
+                replaceToName();
             }
         });
 
@@ -60,15 +60,15 @@ public class SexFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 myRef.child("Users").child(user.getUid()).child("sex").setValue("Женский");
-                replaceToAge();
+                replaceToName();
             }
         });
 
         return view;
     }
 
-    public void replaceToAge(){
-        Fragment fragment = new AgeFragment();
+    public void replaceToName(){
+        Fragment fragment = new NameFragment();
         FragmentManager fm = getActivity().getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
