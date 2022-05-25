@@ -68,7 +68,7 @@ public class NameFragment extends Fragment {
                 String nameStr = inputName.getText().toString();
                 myRef.child("Users").child(user.getUid()).child("name").setValue(nameStr);
 
-                Fragment fragment = new AgeFragment();
+                Fragment fragment = new WeightFragment();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);

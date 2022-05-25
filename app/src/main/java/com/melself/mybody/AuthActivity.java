@@ -133,7 +133,6 @@ public class AuthActivity extends AppCompatActivity {
                         user.setPassword(passReg.getText().toString());
                         user.setName("Не указанно");
                         user.setSex("Не указанно");
-                        user.setYear(0);
                         user.setWeight(0);
                         user.setGrowth(0);
 

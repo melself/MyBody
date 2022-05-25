@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/trainer"
-        android:title="Programm"
-        android:icon="@drawable/ic_barbell"/>
+        android:id="@+id/statistics"
+        android:title="Statistics"
+        android:icon="@drawable/ic_pulse"/>
 
     <item
         android:id="@+id/profile"

@@ -9,12 +9,11 @@ public class User {
     }
 
 
-    public User(String name, String email, String password, String sex, int year, int weight, int growth) {
+    public User(String name, String email, String password, String sex, int weight, int growth) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.sex = sex;
-        this.year = year;
         this.weight = weight;
         this.growth = growth;
     }
@@ -49,14 +48,6 @@ public class User {
 
     public void setSex(String sex) {
         this.sex = sex;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public int getWeight() {

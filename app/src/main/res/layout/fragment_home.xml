@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,19 +10,19 @@
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:background="#2C2C2E"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="60dp"
             android:orientation="horizontal" >
 
             <Button
@@ -32,7 +33,7 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/opensans_regular"
                 android:background="@drawable/custom_button_days"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:textAllCaps="false"/>
 
             <Button
@@ -103,5 +104,33 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+    <ListView
+        android:id="@+id/myListTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="150dp">
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/addBtn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:background="@drawable/custom_button_perpl"/>
+
+    <TextView
+        android:id="@+id/selectDayTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите день"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="24sp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="15dp"/>
 
 </FrameLayout>

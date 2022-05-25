@@ -2,4 +2,14 @@
     <string name="app_name">MyBody</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="exercises">
+        <item>Приседание со штангой</item>
+        <item>Подъем гантелей плечами</item>
+        <item>Жим ног</item>
+        <item>Разгибание ног в тренажёре</item>
+        <item>Жим от плеч</item>
+        <item>Подъем веса икрами</item>
+        <item>Поднятие ног вися</item>
+    </string-array>
 </resources>

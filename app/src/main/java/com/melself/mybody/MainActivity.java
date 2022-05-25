@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        Helper helper = new Helper();
+        helper.getAllData(this);
+
         replaceFragment(new HomeFragment());
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.darkGray));
@@ -42,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
 
-                case R.id.trainer:
-                    replaceFragment(new TrainerFragment());
+                case R.id.statistics:
+                    replaceFragment(new StatisticsFragment());
                     if (Build.VERSION.SDK_INT >= 21) {
                         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.dark));
                     }
@@ -59,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
+
 
     public void replaceFragment(Fragment fragment){
         FragmentManager fm = getSupportFragmentManager();
