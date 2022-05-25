@@ -65,17 +65,23 @@
         android:layout_marginTop="275dp"
         android:layout_marginStart="40dp"/>
 
-    <TextView
-        android:id="@+id/weightStat"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:text="..."
-        android:textColor="@color/white"
+        android:maxLength="3"
+        android:ems="10"
+        android:inputType="number"
         android:fontFamily="@font/opensans_regular"
+        android:text="..."
         android:textSize="16sp"
         android:layout_gravity="top|end"
         android:layout_marginTop="275dp"
-        android:layout_marginEnd="40dp"/>
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@null"
+        tools:ignore="RtlCompat" />
 
     <View
         android:layout_width="350dp"
@@ -95,23 +101,41 @@
         android:layout_marginTop="325dp"
         android:layout_marginStart="40dp"/>
 
-    <TextView
-        android:id="@+id/growthStat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="..."
-        android:textColor="@color/white"
-        android:fontFamily="@font/opensans_regular"
-        android:textSize="16sp"
-        android:layout_gravity="top|end"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="40dp"/>
-
     <View
         android:layout_width="350dp"
         android:layout_height="1dp"
         android:background="@color/gray"
         android:layout_gravity="top|center"
         android:layout_marginTop="360dp"/>
+
+    <EditText
+        android:id="@+id/editTextGrowth"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:ems="10"
+        android:inputType="number"
+        android:fontFamily="@font/opensans_regular"
+        android:text="..."
+        android:textSize="16sp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="@null"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/updateStat"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:text="Обновить"
+        android:textSize="18sp"
+        android:fontFamily="@font/opensans_regular"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button_perpl"/>
 
 </FrameLayout>

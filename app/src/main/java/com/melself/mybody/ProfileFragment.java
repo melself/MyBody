@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileFragment extends Fragment {
 
-    Button signOutBtn;
+    Button signOutBtn, settingsBtn;
     TextView nameProf;
 
     private FirebaseAuth mAuth;
@@ -42,11 +44,23 @@ public class ProfileFragment extends Fragment {
 
         signOutBtn = view.findViewById(R.id.signOutBtn);
         nameProf = view.findViewById(R.id.nameProf);
+        settingsBtn = view.findViewById(R.id.settingsBtn);
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
         myRef = db.getReference();
         FirebaseUser user = mAuth.getCurrentUser();
+
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new SettingsFragment();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainFrameForFragments, fragment);
+                ft.commit();
+            }
+        });
 
         myRef.child("Users").addValueEventListener(new ValueEventListener() {
             @Override

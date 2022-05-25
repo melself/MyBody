@@ -2,7 +2,7 @@ package com.melself.mybody;
 
 public class User {
     private String name, email, password, sex;
-    private int year, weight, growth;
+    private int weight, growth;
 
     public User() {
 
