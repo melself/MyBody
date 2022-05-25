@@ -175,59 +175,13 @@ public class HomeFragment extends Fragment {
                 Helper.indexList = i;
                 Helper.checkTaskName = helper.getNameTaskHome(getContext(), inp);
                 Helper.checkTaskDesc = helper.getDescTaskHome(getContext(),inp);
+                Helper.checkIMG = helper.getIMGTaskHome(getContext(), inp);
 
                 Fragment fragment = new ChekForHomeTask();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.mainFrameForFragments, fragment);
                 ft.commit();
-            }
-        });
-    }
-
-    public void removeTask(){
-        SQLiteOpenHelper tsk = new SaveTaskHelper(getContext());
-        SQLiteDatabase db = tsk.getReadableDatabase();
-        myListTask.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String getName = myAdapter.getItem(i);
-                System.out.println(getName);
-                if (Helper.selectDay == 1){
-                    SaveTaskHelper d1 = new SaveTaskHelper(getContext());
-                    d1.updateD1(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 2){
-                    SaveTaskHelper d2 = new SaveTaskHelper(getContext());
-                    d2.updateD2(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 3){
-                    SaveTaskHelper d3 = new SaveTaskHelper(getContext());
-                    d3.updateD3(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 4){
-                    SaveTaskHelper d4 = new SaveTaskHelper(getContext());
-                    d4.updateD4(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 5){
-                    SaveTaskHelper d5 = new SaveTaskHelper(getContext());
-                    d5.updateD5(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 6){
-                    SaveTaskHelper d6 = new SaveTaskHelper(getContext());
-                    d6.updateD6(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
-                else if(Helper.selectDay == 7){
-                    SaveTaskHelper d7 = new SaveTaskHelper(getContext());
-                    d7.updateD7(db, getName, 0);
-                    myAdapter.notifyDataSetChanged();
-                }
             }
         });
     }

@@ -13,6 +13,7 @@ public class Helper {
     static int selectDay;
     static String checkTaskName;
     static String checkTaskDesc;
+    static int checkIMG;
 
     //Навигация по спискам
     static ArrayList<String> nameTask = new ArrayList<>();
@@ -24,6 +25,7 @@ public class Helper {
     static ArrayList<Integer> D5 = new ArrayList<>();
     static ArrayList<Integer> D6 = new ArrayList<>();
     static ArrayList<Integer> D7 = new ArrayList<>();
+    static ArrayList<Integer> IMG = new ArrayList<>();
     static int indexList;
 
 
@@ -45,6 +47,7 @@ public class Helper {
                 D5.add(cursor.getInt(7));
                 D6.add(cursor.getInt(8));
                 D7.add(cursor.getInt(9));
+                IMG.add(cursor.getInt(10));
             }
             db.close();
             cursor.close();
@@ -87,6 +90,22 @@ public class Helper {
         return desc;
     }
 
+    public int getIMGTask(Context context, int i){
+        int img = 0;
+        SQLiteOpenHelper tsk = new SaveTaskHelper(context);
+        SQLiteDatabase db = tsk.getReadableDatabase();
+        try {
+            Cursor cursor = db.query("TASKS", null, null, null, null, null, null);
+
+            while (cursor.moveToNext()){
+                img = Helper.IMG.get(i);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return img;
+    }
+
     public String getNameTaskHome(Context context, String input){
         String name = null;
         String temp;
@@ -127,5 +146,27 @@ public class Helper {
             e.printStackTrace();
         }
         return desc;
+    }
+
+    public int getIMGTaskHome(Context context, String input){
+        String name;
+        int img = 0;
+        int temp;
+        SQLiteOpenHelper tsk = new SaveTaskHelper(context);
+        SQLiteDatabase db = tsk.getReadableDatabase();
+        try {
+            Cursor cursor = db.query("TASKS", null, null, null, null, null, null);
+
+            while (cursor.moveToNext()){
+                name = cursor.getString(1);
+                temp = cursor.getInt(10);
+                if(name.equals(input)){
+                    img = temp;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return img;
     }
 }

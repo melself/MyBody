@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import Database.SaveTaskHelper;
@@ -24,6 +25,7 @@ public class TaskChekFragment extends Fragment {
     TextView tvNameTask, tvDescTask;
     Button confAddBtm;
     ImageButton backToSelect;
+    ImageView imageTask;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,14 @@ public class TaskChekFragment extends Fragment {
         tvDescTask = view.findViewById(R.id.tvDescTask);
         confAddBtm = view.findViewById(R.id.confAddBtn);
         backToSelect = view.findViewById(R.id.backToSelect);
+        imageTask = view.findViewById(R.id.imageTask);
 
         SQLiteOpenHelper tsk = new SaveTaskHelper(getContext());
         SQLiteDatabase db = tsk.getReadableDatabase();
 
         tvNameTask.setText(Helper.checkTaskName);
         tvDescTask.setText(Helper.checkTaskDesc);
+        imageTask.setImageResource(Helper.checkIMG);
 
         backToSelect.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import Database.SaveTaskHelper;
@@ -22,8 +23,7 @@ public class ChekForHomeTask extends Fragment {
     TextView tvNameTask2, tvDescTask2;
     Button removeTaskBtn;
     ImageButton backToHome;
-
-
+    ImageView imageTask2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,12 +39,14 @@ public class ChekForHomeTask extends Fragment {
         tvDescTask2 = view.findViewById(R.id.tvDescTask2);
         removeTaskBtn = view.findViewById(R.id.removeTaskBtn);
         backToHome = view.findViewById(R.id.backToHome);
+        imageTask2 = view.findViewById(R.id.imageTask2);
 
         SQLiteOpenHelper tsk = new SaveTaskHelper(getContext());
         SQLiteDatabase db = tsk.getReadableDatabase();
 
         tvNameTask2.setText(Helper.checkTaskName);
         tvDescTask2.setText(Helper.checkTaskDesc);
+        imageTask2.setImageResource(Helper.checkIMG);
 
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override

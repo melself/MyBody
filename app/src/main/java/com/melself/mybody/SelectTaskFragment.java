@@ -60,6 +60,7 @@ public class SelectTaskFragment extends Fragment {
                 Helper.indexList = i;
                 Helper.checkTaskName = helper.getNameTask(getContext(),Helper.indexList);
                 Helper.checkTaskDesc = helper.getDescTask(getContext(),Helper.indexList);
+                Helper.checkIMG = helper.getIMGTask(getContext(),Helper.indexList);
 
                 Fragment fragment = new TaskChekFragment();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
