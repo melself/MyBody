@@ -135,6 +135,7 @@ public class AuthActivity extends AppCompatActivity {
                         user.setSex("Не указанно");
                         user.setWeight(0);
                         user.setGrowth(0);
+                        user.setImage_id("");
 
                         users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
                         Toast.makeText(AuthActivity.this, "Регистрация пройдена", Toast.LENGTH_SHORT).show();
