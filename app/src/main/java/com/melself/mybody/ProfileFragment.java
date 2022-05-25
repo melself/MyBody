@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,6 @@ public class ProfileFragment extends Fragment {
                 Object imageFrom = snapshot.child(user.getUid()).child("image_id").getValue();
                 urlImg = imageFrom.toString();
                 System.out.println(urlImg);
-                Glide.with(getContext()).load(urlImg).into(imgProf);
             }
 
             @Override
@@ -110,6 +110,17 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        CountDownTimer countDownTimer = new CountDownTimer(1000,1000) {
+            @Override
+            public void onTick(long l) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                Glide.with(ProfileFragment.this).load(urlImg).into(imgProf);
+            }
+        }.start();
         return view;
     }
 }

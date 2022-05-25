@@ -139,6 +139,7 @@ public class SettingsFragment extends Fragment {
                         });
                 myRef.child("Users").child(user.getUid()).child("name").setValue(name);
                 myRef.child("Users").child(user.getUid()).child("password").setValue(pass);
+                myRef.child("Users").child(user.getUid()).child("image_id").setValue(uploadUri.toString());
             }
         });
 
@@ -202,7 +203,6 @@ public class SettingsFragment extends Fragment {
             public void onComplete(@NonNull Task<Uri> task) {
                 uploadUri = task.getResult();
                 Toast.makeText(getContext(), "Фото загружено", Toast.LENGTH_SHORT).show();
-                System.out.println(uploadUri);
             }
         });
     }
